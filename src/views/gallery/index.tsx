@@ -33,7 +33,6 @@ export function UploadGallery(props: Props): JSX.Element {
   const { i18n, t } = useTranslation('general')
   const {
     collection: {
-      // @ts-expect-error: TODO
       admin: { description } = {},
       labels: { plural: pluralLabel, singular: singularLabel }
     },
@@ -70,23 +69,28 @@ export function UploadGallery(props: Props): JSX.Element {
       <Meta title={getTranslation(collection.labels.plural, i18n)} />
       <SelectionProvider docs={data.docs} totalDocs={data.totalDocs}>
         <Gutter className={`${baseClass}__wrap`}>
-          <header className={`${baseClass}__header`} style={{ marginBottom: '1rem' }}>
-            <h1>{getTranslation(pluralLabel, i18n)}</h1>
-            {hasCreatePermission && (
-              <Pill
-                aria-label={t('createNewLabel', { label: getTranslation(singularLabel, i18n) })}
-                to={newDocumentURL}
-              >
-                {t('createNew')}
-              </Pill>
-            )}
-            {!smallBreak && (
-              <ListSelection label={getTranslation(collection.labels.plural, i18n)} />
-            )}
-            {description != null && (
-              <div className={`${baseClass}__sub-header`}>
-                <ViewDescription description={description} />
-              </div>
+        <header className={`${baseClass}__header`} style={{ marginBottom: '1rem' }}>
+            {customHeader != null && customHeader}
+            {customHeader == null && (
+              <>
+                <h1>{getTranslation(pluralLabel, i18n)}</h1>
+                {hasCreatePermission && (
+                  <Pill
+                    aria-label={t('createNewLabel', { label: getTranslation(singularLabel, i18n) })}
+                    to={newDocumentURL}
+                  >
+                    {t('createNew')}
+                  </Pill>
+                )}
+                {!smallBreak && (
+                  <ListSelection label={getTranslation(collection.labels.plural, i18n)} />
+                )}
+                {description != null && (
+                  <div className={`${baseClass}__sub-header`}>
+                    <ViewDescription description={description} />
+                  </div>
+                )}
+              </>
             )}
           </header>
           <ListControls
@@ -97,7 +101,6 @@ export function UploadGallery(props: Props): JSX.Element {
             handleWhereChange={handleWhereChange}
             modifySearchQuery={modifySearchParams}
             resetParams={resetParams}
-            // @ts-expect-error: TODO
             titleField={titleField}
           />
           {formattedDocs == null && (
