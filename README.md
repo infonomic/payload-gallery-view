@@ -1,5 +1,7 @@
 # Payload CMS Gallery View
 
+![Photo Gallery](photo-gallery-og.jpg)
+
 This is a proof of concept (PoC) custom list view for an upload collection that will display the uploaded images in a gallery view (as opposed to the default table view).
 
 It's based on a 'hacked' version of the `Default.tsx`.tsx list view which can be found here...
