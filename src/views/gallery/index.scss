@@ -1,0 +1,17 @@
+@import '../../../node_modules/payload/dist/admin/scss/styles.scss';
+
+.upload-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  padding: 0;
+  margin: 0 0.125rem;
+  gap: 12px;
+
+  &__thumbnail-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0;
+    max-width: initial;
+  }
+}

@@ -1,0 +1,11 @@
+build
+dist
+/media
+node_modules
+.DS_Store
+.env
+uploads
+
+# Ignore our local mongodb data directory
+mongodb/data
+mongodb/backups

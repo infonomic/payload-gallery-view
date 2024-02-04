@@ -1,0 +1,12 @@
+@import '../../../../node_modules/payload/dist/admin/scss/styles.scss';
+
+
+.gallery-thumbnail {
+
+  img,
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

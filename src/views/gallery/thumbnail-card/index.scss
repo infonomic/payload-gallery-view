@@ -1,0 +1,54 @@
+@import '../../../../node_modules/payload/dist/admin/scss/styles.scss';
+
+.gallery-thumbnail-card {
+  @include shadow;
+  height: 100%;
+  background: var(--color-base-50);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  padding-bottom: 8px;
+  text-decoration: none;
+
+  &__title {
+    padding-bottom: base(.3);
+    color: var(--color-base-800);
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  &__filename {
+    padding-bottom: base(.5);
+    color: var(--color-base-900);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+
+  &__thumbnail {
+    display: block;
+    margin-bottom: base(0.5);
+    aspect-ratio: 1;
+  }
+
+  &__thumbnail:hover {
+    transform: scale(1.03);
+    transition: all 200ms ease;
+  }
+}
+
+html[data-theme='dark'] {
+  .gallery-thumbnail-card {
+    background: var(--color-base-800);
+
+    &__title {
+      color: var(--color-base-300);
+    }
+
+    &__filename {
+      color: var(--color-base-200);
+    }
+  }
+}
