@@ -18,7 +18,7 @@ To start MongoDB
 1. `./mongo.sh up`
 
 To start Payload:
-
+1. Copy `.env.example` to `.env`. NOTE: The Payload secret and mongodb test account are in the .env.example file since this is a 'test only' repo.
 1. `pnpm install && pnpm dev`
 1. Then `open http://localhost:3000/admin` to access the admin panel
 1. Create your first admin user using the form on the page
