@@ -19,18 +19,18 @@ To start MongoDB
 
 To start Payload:
 
-1. Next `pnpm install && pnpm dev`
-1. Now `open http://localhost:3000/admin` to access the admin panel
+1. `pnpm install && pnpm dev`
+1. Then `open http://localhost:3000/admin` to access the admin panel
 1. Create your first admin user using the form on the page
 
 ## To Test the View and Collection
 
-1. Start by creating / uploading one or more photos to the Photo collection. You should see photos displayed in a 'selectable' grid. Images will be uploaded into a root 'uploads' directory. You may need to create this directory first.
+1. Start by creating / uploading one or more photos to the Photo collection. You should see photos displayed in a 'selectable' grid. Images will be uploaded into a `src/uploads` directory. You may need to create this directory first.
 
 
 ## TODO
 
 1. Add 'toggleAll' option
-1. Solve the 'Relation' select problem. To test this, create a Minimal collection document and attempt to select a photo from the Photos collection. The selection is not recognised by the modal :-(
+1. Solve the 'Relation' select problem. To test this, create a Minimal collection document and attempt to select an existing photo from the Photos collection. The selection is not recognized by the modal :-(
 
 
