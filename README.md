@@ -4,7 +4,7 @@
 
 This is a proof of concept (PoC) custom list view for an upload collection that will display the uploaded images in a gallery view (as opposed to the default table view).
 
-It's based on a 'hacked' version of the `Default.tsx`.tsx list view which can be found here...
+It's based on a 'hacked' version of the `Default.tsx` list view which can be found here...
 https://github.com/payloadcms/payload/tree/main/packages/payload/src/admin/components/views/collections/List
 
 
