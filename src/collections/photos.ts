@@ -38,7 +38,7 @@ export const Photos: CollectionConfig = {
   defaultSort: 'createdAt',
   upload: {
     adminThumbnail: getAdminThumbnail,
-    staticDir: path.resolve(__dirname, '../../uploads/photos'),
+    staticDir: path.resolve(__dirname, '../uploads/photos'),
     mimeTypes: ['image/*'],
     imageSizes: [
       {

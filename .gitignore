@@ -4,7 +4,7 @@ dist
 node_modules
 .DS_Store
 .env
-uploads
+src/uploads
 
 # Ignore our local mongodb data directory
 mongodb/data
