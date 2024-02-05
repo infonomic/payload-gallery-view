@@ -54,9 +54,9 @@ export function UploadGallery(props: Props): JSX.Element {
   } = props
 
   // See: https://github.com/payloadcms/payload/issues/4990 
-  if (customHeader != null) {
-    return <DefaultList {...props} />
-  }
+  // if (customHeader != null) {
+  //   return <DefaultList {...props} />
+  // }
   
   let formattedDocs = data?.docs
 
