@@ -36,15 +36,11 @@ const useThumbnail = (collection: SanitizedCollectionConfig, doc: Photo): string
       return `${serverURL}${thumbnailURL}`
     }
 
-    // @ts-expect-error: TODO
     if (sizes?.[adminThumbnail]?.url != null) {
-      // @ts-expect-error: TODO
       return sizes[adminThumbnail].url
     }
 
-    // @ts-expect-error: TODO
     if (sizes?.[adminThumbnail]?.filename != null) {
-      // @ts-expect-error: TODO
       return `${serverURL}${staticURL}/${sizes[adminThumbnail].filename}`
     }
 

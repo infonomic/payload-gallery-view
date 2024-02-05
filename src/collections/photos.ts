@@ -39,6 +39,8 @@ export const Photos: CollectionConfig = {
   upload: {
     adminThumbnail: getAdminThumbnail,
     staticDir: path.resolve(__dirname, '../uploads/photos'),
+    // staticDir: '/uploads/photos',
+    // staticURL: '/uploads/photos',
     mimeTypes: ['image/*'],
     imageSizes: [
       {
@@ -150,3 +152,4 @@ export const Photos: CollectionConfig = {
     },
   ]
 }
+
