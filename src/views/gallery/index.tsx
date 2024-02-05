@@ -6,6 +6,7 @@ import { Pill } from 'payload/components'
 import { Gutter, Button } from 'payload/components/elements'
 import { Meta } from 'payload/components/utilities'
 import { ListControls } from 'payload/dist/admin/components/elements/ListControls'
+import DefaultList from 'payload/dist/admin/components/views/collections/List/Default'
 import ListSelection from 'payload/dist/admin/components/elements/ListSelection'
 import Paginator from 'payload/dist/admin/components/elements/Paginator'
 import PerPage from 'payload/dist/admin/components/elements/PerPage'
@@ -52,6 +53,11 @@ export function UploadGallery(props: Props): JSX.Element {
     titleField
   } = props
 
+  // See: https://github.com/payloadcms/payload/issues/4990 
+  if (customHeader != null) {
+    return <DefaultList {...props} />
+  }
+  
   let formattedDocs = data?.docs
 
   if (collection.upload != null && formattedDocs != null && formattedDocs.length > 0) {
