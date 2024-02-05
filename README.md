@@ -31,6 +31,7 @@ To start Payload:
 ## TODO
 
 1. Add 'toggleAll' option
+1. Add a 'Button Group / Icons' for Gallery and Default views - allowing a user to switch between either view (with the last view stored in preferences.)
 1. Solve the 'Relation' select problem. To test this, create a Minimal collection document and attempt to select an existing photo from the Photos collection. The selection is not recognized by the modal :-(
 
 
