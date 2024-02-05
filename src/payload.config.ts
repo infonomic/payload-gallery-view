@@ -15,7 +15,7 @@ export default buildConfig({
     user: Users.slug,
     bundler: webpackBundler(),
   },
-  serverURL: 'http://localhost:3000',
+  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL ?? 'http://localhost:3000',
   editor: slateEditor({}),
   collections: [Minimal, Photos, Users, ],
   typescript: {
