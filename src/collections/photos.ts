@@ -139,6 +139,7 @@ export const Photos: CollectionConfig = {
       }
     },
     {
+      // NOTE: in production this is a richText field. Simplified here for this PoC
       name: 'caption',
       type: "textarea",
       required: true,

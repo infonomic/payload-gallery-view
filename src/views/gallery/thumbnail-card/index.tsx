@@ -38,7 +38,11 @@ export const ThumbnailCard: React.FC<Props> = (props) => {
         {collection != null && doc != null && <Thumbnail doc={doc} collection={collection} />}
       </div>
       {doc?.title != null && <div className={`${baseClass}__title`}>{doc?.title}</div>}
-
+      {/* TODO: If this component could receive an 'onSelect' handler from the main
+        UploadGallery component props, then we could swap the <a> element with a 
+        button that calls the onSelect handler for the ListDrawer, solving this issue...  
+        See: https://github.com/payloadcms/payload/issues/4990 
+      */}
       <a
         href={`${admin}/collections/${collection.slug}/${doc.id}`}
         className={`${baseClass}__filename`}

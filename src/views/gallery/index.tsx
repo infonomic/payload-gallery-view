@@ -53,7 +53,22 @@ export function UploadGallery(props: Props): JSX.Element {
     titleField
   } = props
 
-  // See: https://github.com/payloadcms/payload/issues/4990 
+/**
+  * Note: Below is a workaround for not being able to select an image 
+  * via the ListDrawer when a photo is selected from a 'relationTo' 
+  * field. If the customHeader is set then we've mostly 
+  * likely come via the ListDrawer. Commented out for now to
+  * demonstrate the issue raised below.
+  * 
+  * If we could receive the onSelect handler from the ListDrawer,
+  * then we would pass this handler to ThumbnailCard below - 
+  * and ThumbnailCard would then 'swap' the hyperlink to the collection
+  * admin details / edit view, for a button that would call the 
+  * onSelect handler.
+  * 
+  * See: https://github.com/payloadcms/payload/issues/4990 
+  */
+
   // if (customHeader != null) {
   //   return <DefaultList {...props} />
   // }
